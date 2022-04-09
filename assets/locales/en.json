@@ -1,0 +1,13 @@
+{
+    "contracts": "Contracts",
+    "invoice": "Invoice",
+    "fish": "Fish:",
+    "amount": "Amount:",
+    "last invoice": "Last invoice:",
+    "number of invoices": "Number of invoices:",
+    "paid": "Paid",
+    "load more": "Load more:",
+    "history": "History",
+    "saved": "Saved",
+    "profile": "Profile"
+}
