@@ -1,3 +1,4 @@
+import 'package:contackt/components/const_img_icons.dart';
 import 'package:contackt/screens/pages/contract_page.dart';
 import 'package:contackt/screens/pages/history_page.dart';
 import 'package:contackt/screens/pages/new_page.dart';
@@ -41,8 +42,8 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
                 height: he(20),
                 width: wi(18),
                 child: pageIndex == 0
-                    ? Image.asset('assets/icons/Document_light.png')
-                    : Image.asset('assets/icons/Document_darck.png'),
+                    ? Image.asset(IconImgClass.documentLight)
+                    : Image.asset(IconImgClass.documentDarck),
               ),
               label: 'Contracts'),
           BottomNavigationBarItem(
@@ -51,8 +52,8 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
                 height: he(20),
                 width: wi(18),
                 child: pageIndex == 1
-                    ? Image.asset('assets/icons/Time Circle_light.png')
-                    : Image.asset('assets/icons/Time Circle_darck.png'),
+                    ? Image.asset(IconImgClass.historyLight)
+                    : Image.asset(IconImgClass.historyDarck),
               ),
               label: 'History'),
           BottomNavigationBarItem(
@@ -61,28 +62,31 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
                 height: he(20),
                 width: wi(18),
                 child: pageIndex == 2
-                    ? Image.asset('assets/icons/Plus_light.png')
-                    : Image.asset('assets/icons/Plus_darck.png'),
+                    ? Image.asset(IconImgClass.newLight)
+                    : Image.asset(IconImgClass.newDarck),
               ),
               label: 'New'),
           BottomNavigationBarItem(
               backgroundColor: Colors.black,
               icon: SizedBox(
-                  height: he(20),
-                  width: wi(18),
-                  child: pageIndex == 3
-                      ? Image.asset('assets/icons/Bookmark_light.png')
-                      : Image.asset('assets/icons/Bookmark_darck.png')),
+                height: he(20),
+                width: wi(18),
+                child: pageIndex == 3
+                    ? Image.asset(IconImgClass.savedLight)
+                    : Image.asset(IconImgClass.savedDarck),
+              ),
               label: 'Saved'),
           BottomNavigationBarItem(
-              backgroundColor: Colors.black,
-              icon: SizedBox(
-                  height: he(20),
-                  width: wi(18),
-                  child: pageIndex == 4
-                      ? Image.asset('assets/icons/Profile_light.png')
-                      : Image.asset('assets/icons/Profile_darck.png')),
-              label: 'Profile'),
+            backgroundColor: Colors.black,
+            icon: SizedBox(
+              height: he(20),
+              width: wi(18),
+              child: pageIndex == 4
+                  ? Image.asset(IconImgClass.profileLight)
+                  : Image.asset(IconImgClass.profileDarck),
+            ),
+            label: 'Profile',
+          ),
         ],
       ),
     );
