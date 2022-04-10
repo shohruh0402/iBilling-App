@@ -29,6 +29,10 @@ class _BottomNavigatorPageState extends State<BottomNavigatorPage> {
     return Scaffold(
       body: pages[pageIndex],
       bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: Colors.grey,
+        fixedColor: Colors.white,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.black,
         currentIndex: pageIndex,
         onTap: (value) {
           setState(() {

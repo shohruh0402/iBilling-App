@@ -1,5 +1,19 @@
 {
-    "welcome": "Salom",
-    "language": "Til",
-    "balance": "Balansingiz"
+    "contracts": "Shartnomalar",
+    "invoice": "Faktura",
+    "fish": "Fish:",
+    "amount": "Miqdori:",
+    "lastinvoice": "Oxirgi hisob-faktura:",
+    "numberofinvoice": "Hisob-fakturalar soni:",
+    "paid": "To'langan",
+    "more": "Ko'proq yuklash:",
+    "history": "Tarix",
+    "saved": "Saqlanganlar",
+    "profile": "Profile",
+    "choosealanguage": "Tilni tanlang",
+    "date": "Sana",
+    "dateofbirth": "Tug'ilgan kun sana:",
+    "phonenumber": "Telefon nomer:",
+    "email": "E-mail:",
+    "language" : "O‘zbek (Lotin)"
 }

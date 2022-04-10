@@ -1,6 +1,7 @@
 import 'package:contackt/components/widgets/container_widgets.dart';
 import 'package:contackt/sizeconfige/sizeconfig.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           SizedBox(height: he(26)),
           BarFor(
-            text: 'Profile',
+            text: 'profile',
             vis: false,
           ),
           Padding(
@@ -79,7 +80,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(height: he(22)),
                         Row(
                           children: [
-                            myText('Date of birth:'),
+                            myText('dateofbirth'),
                             SizedBox(
                               width: wi(7),
                             ),
@@ -89,7 +90,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(height: he(12)),
                         Row(
                           children: [
-                            myText('Phone number:'),
+                            myText('phonenumber'),
                             SizedBox(
                               width: wi(7),
                             ),
@@ -99,7 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(height: he(12)),
                         Row(
                           children: [
-                            myText('E-mail:'),
+                            myText('email'),
                             SizedBox(
                               width: wi(7),
                             ),
@@ -124,7 +125,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        myText('English (USA)'),
+                        myText('language'),
                         GestureDetector(
                           child: CircleAvatar(
                             radius: he(14),
@@ -134,7 +135,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               context: context,
                               builder: (_) => AlertDialog(
                                 title: const Center(
-                                  child: Text('Choose a language'),
+                                  child: LocaleText('Choose a language'),
                                 ),
                                 content: StatefulBuilder(
                                   builder: (context, setState) => SizedBox(
@@ -150,6 +151,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             onChanged: (v) {
                                               setState(() {
                                                 _groupValue = v;
+                                                Locales.change(context, 'uz');
                                               });
                                             }),
                                         RadioListTile(
@@ -160,6 +162,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             onChanged: (v) {
                                               setState(() {
                                                 _groupValue = v;
+                                                Locales.change(context, 'en');
                                               });
                                             }),
                                         RadioListTile(
@@ -170,6 +173,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             onChanged: (v) {
                                               setState(() {
                                                 _groupValue = v;
+                                                Locales.change(context, 'ru');
                                               });
                                             }),
                                         Row(
@@ -230,7 +234,7 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   Text myText(String text) {
-    return Text(
+    return LocaleText(
       text,
       style: TextStyle(
         color: Colors.white,

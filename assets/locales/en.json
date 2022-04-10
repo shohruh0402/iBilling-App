@@ -3,11 +3,17 @@
     "invoice": "Invoice",
     "fish": "Fish:",
     "amount": "Amount:",
-    "last invoice": "Last invoice:",
-    "number of invoices": "Number of invoices:",
+    "lastinvoice": "Last invoice:",
+    "numberofinvoice": "Number of invoices:",
     "paid": "Paid",
-    "load more": "Load more:",
+    "more": "Load more:",
     "history": "History",
     "saved": "Saved",
-    "profile": "Profile"
+    "profile": "Profile",
+    "Choose a language" :"Choose a language",
+    "date": "Date",
+    "dateofbirth": "Date of birth:",
+    "phonenumber" : "Phone number:",
+    "email":"E-mail:",
+    "language" : "English (USA)"
 }

@@ -1,0 +1,19 @@
+{
+    "contracts": "Контракты",
+    "invoice": "Счет",
+    "fish": "ФИШ:",
+    "amount": "Количество:",
+    "lastinvoice": "Последний счет:",
+    "numberofinvoice": "Количество счетов:",
+    "paid": "Оплаченный",
+    "more": "Загрузи больше:",
+    "history": "История",
+    "saved": "Сохранено",
+    "profile": "Профиль",
+    "Choose a language" :"Выберите язык",
+    "date" : "Дата",
+    "dateofbirth": "Дата рождения:",
+    "phonenumber" : "Телефонный номер:",
+    "email":"Эл. адрес:",
+    "language" : "Русский"
+}

@@ -2,6 +2,7 @@ import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:contackt/components/widgets/container_widgets.dart';
 import 'package:contackt/sizeconfige/sizeconfig.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class ContaractPage extends StatefulWidget {
@@ -15,6 +16,7 @@ class _ContaractPageState extends State<ContaractPage> {
   int item = 3;
   bool vis = false;
 
+  // ignore: prefer_final_fields
   RefreshController _controller = RefreshController();
 
   @override
@@ -40,7 +42,7 @@ class _ContaractPageState extends State<ContaractPage> {
             child: Column(
               children: [
                 BarFor(
-                  text: 'Contracts',
+                  text: 'contracts',
                 ),
                 SizedBox(
                   height: he(149),
@@ -64,20 +66,18 @@ class _ContaractPageState extends State<ContaractPage> {
                 Row(
                   children: [
                     SizedBox(width: wi(16)),
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: const Text('Contracts'),
-                      style: OutlinedButton.styleFrom(
-                        backgroundColor: const Color(0xFF00A795),
-                        fixedSize: Size(
-                          wi(92),
-                          he(33),
+                    SizedBox(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const LocaleText('contracts'),
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: const Color(0xFF00A795),
                         ),
                       ),
                     ),
                     SizedBox(width: wi(28)),
-                    Text(
-                      'Invoice',
+                    LocaleText(
+                      'invoice',
                       style: TextStyle(color: Colors.white, fontSize: wi(15)),
                     ),
                   ],
@@ -88,14 +88,17 @@ class _ContaractPageState extends State<ContaractPage> {
                 for (var i = 0; i < item; i++) const InfoContainer(),
                 Visibility(
                   visible: vis,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Load more'),
-                    style: OutlinedButton.styleFrom(
-                      backgroundColor: const Color(0xFF00A795),
-                      fixedSize: Size(
-                        wi(92),
-                        he(33),
+                  child: SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          item += 1;
+                        });
+                      },
+                      child: const LocaleText('more'),
+                      style: OutlinedButton.styleFrom(
+                        backgroundColor: const Color(0xFF00A795),
+                        
                       ),
                     ),
                   ),

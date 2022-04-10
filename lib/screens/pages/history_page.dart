@@ -1,6 +1,7 @@
 import 'package:contackt/components/widgets/container_widgets.dart';
 import 'package:contackt/sizeconfige/sizeconfig.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class HistoryPage extends StatelessWidget {
   const HistoryPage({Key? key}) : super(key: key);
@@ -26,8 +27,8 @@ class HistoryPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: he(4)),
-                    Text(
-                      'Date',
+                    LocaleText(
+                      'date',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: wi(14),

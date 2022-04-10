@@ -1,5 +1,6 @@
 import 'package:contackt/sizeconfige/sizeconfig.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 
 class InfoContainer extends StatelessWidget {
   const InfoContainer({Key? key}) : super(key: key);
@@ -46,8 +47,8 @@ class InfoContainer extends StatelessWidget {
                   child: Center(
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: wi(5)),
-                      child: const Text(
-                        'Paid',
+                      child: const LocaleText(
+                        'paid',
                         style: TextStyle(
                           color: Color(0xFF49B7A5),
                         ),
@@ -60,7 +61,7 @@ class InfoContainer extends StatelessWidget {
             SizedBox(height: he(14)),
             Row(
               children: [
-                myText('Fish:'),
+                myText('fish'),
                 SizedBox(
                   width: wi(7),
                 ),
@@ -70,7 +71,7 @@ class InfoContainer extends StatelessWidget {
             SizedBox(height: he(4)),
             Row(
               children: [
-                myText('Amount:'),
+                myText('amount'),
                 SizedBox(
                   width: wi(7),
                 ),
@@ -80,7 +81,7 @@ class InfoContainer extends StatelessWidget {
             SizedBox(height: he(4)),
             Row(
               children: [
-                myText('Last invoice:'),
+                myText('lastinvoice'),
                 SizedBox(
                   width: wi(7),
                 ),
@@ -89,14 +90,14 @@ class InfoContainer extends StatelessWidget {
             ),
             Row(
               children: [
-                myText('Number of invoices:'),
+                myText('numberofinvoice'),
                 SizedBox(height: he(4)),
                 SizedBox(
                   width: wi(7),
                 ),
                 myTextGreyy('text'),
-                SizedBox(
-                  width: wi(91),
+                const Expanded(
+                  child: SizedBox(),
                 ),
                 myTextGreyy('31.01.2021')
               ],
@@ -108,7 +109,7 @@ class InfoContainer extends StatelessWidget {
   }
 
   Text myText(String text) {
-    return Text(
+    return LocaleText(
       text,
       style: TextStyle(
         color: Colors.white,
@@ -147,32 +148,34 @@ class BarFor extends StatelessWidget {
               backgroundImage: AssetImage('assets/icons/Ellipse 13.png'),
             ),
             SizedBox(width: wi(12)),
-            Text(
+            LocaleText(
               text,
               style: TextStyle(color: Colors.white, fontSize: wi(18)),
             ),
-            SizedBox(width: wi(120)),
-            Visibility(
-              visible: vis,
-              child: Row(
-                children: [
-                  Image.asset(
-                    'assets/icons/Filter.png',
-                    height: he(20),
-                    width: wi(20),
-                  ),
-                  SizedBox(width: wi(21)),
-                  Text(
-                    '|',
-                    style: TextStyle(color: Colors.white, fontSize: wi(21)),
-                  ),
-                  SizedBox(width: wi(21)),
-                  Image.asset(
-                    'assets/icons/zoom-2 1.png',
-                    height: he(20),
-                    width: wi(20),
-                  ),
-                ],
+            const Expanded(child: SizedBox()),
+            Expanded(
+              child: Visibility(
+                visible: vis,
+                child: Row(
+                  children: [
+                    Image.asset(
+                      'assets/icons/Filter.png',
+                      height: he(20),
+                      width: wi(20),
+                    ),
+                    SizedBox(width: wi(21)),
+                    Text(
+                      '|',
+                      style: TextStyle(color: Colors.white, fontSize: wi(21)),
+                    ),
+                    SizedBox(width: wi(21)),
+                    Image.asset(
+                      'assets/icons/zoom-2 1.png',
+                      height: he(20),
+                      width: wi(20),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
