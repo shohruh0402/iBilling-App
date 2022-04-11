@@ -135,7 +135,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               context: context,
                               builder: (_) => AlertDialog(
                                 title: const Center(
-                                  child: LocaleText('Choose a language'),
+                                  child: LocaleText('choosealanguage'),
                                 ),
                                 content: StatefulBuilder(
                                   builder: (context, setState) => SizedBox(
